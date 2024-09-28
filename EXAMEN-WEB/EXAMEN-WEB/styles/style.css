@@ -1,0 +1,207 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --light-blue: #00ffff;
+    --blue: #0000ff;
+    --dark-blue: #000099;
+    --darkest-blue: #00004d;
+    --light-yellow: #ffffb3;
+    --yellow:  #ffff00;
+    --dark-yellow: #999900;
+    --maroon:  #811000;
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+}
+
+.logo {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90%;
+    width: 75%
+    
+}
+
+.arthas {
+    border: 5px solid var(--yellow);
+    border-radius: 5px;
+}
+
+
+.container {
+    padding: 200rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: 120rem; 
+    color: var(--dark-yellow);
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 3rem;
+    background-color: black;
+    text-align: center;
+    border: 3px solid var(--yellow);
+}
+
+.body {
+    background-color: var(--darkest-blue);
+}
+
+.h1 {
+    font-family: 'Couri New', Courier, monospace;
+    color: var(--dark-blue);
+    text-shadow: 2px 2px var(--white);
+}
+
+.wow-button {
+    background-color: var(--black);
+    color: var(--yellow); 
+    border: 2px solid var(--yellow); 
+    padding: 15px 30px;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    border-radius: 12px;
+    transition: background-color 1s ease;
+}
+
+.wow-button:hover {
+    background-color: var(--dark-yellow);
+    color: var(--black);
+}
+
+.video {
+    border: 5px solid var(--yellow); 
+    border-radius: 10px; 
+    width: 80%; 
+    height: auto; 
+    max-width: 800px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.column {
+    flex: 1;
+    padding: 10px; 
+    text-align: center; 
+}
+
+
+
+
+/* Para el slider si requerí de hacer una investigacion. */
+
+
+.slide {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    width: 100%; 
+    height: auto; 
+    border: 5px solid var(--yellow);
+    border-radius: 5px; 
+}
+
+.slide {
+    min-width: 100%;
+}
+
+input[type="radio"] {
+    display: none; 
+}
+
+input#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+input#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+input#slide4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+input#slide5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+input#slide6:checked ~ .slides {
+    transform: translateX(-500%);
+}
+
+input#slide7:checked ~ .slides {
+    transform: translateX(-600%);
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.navigation label {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    margin: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+input#slide1:checked ~ .navigation label:nth-child(1),
+input#slide2:checked ~ .navigation label:nth-child(2),
+input#slide3:checked ~ .navigation label:nth-child(3),
+input#slide4:checked ~ .navigation label:nth-child(4),
+input#slide5:checked ~ .navigation label:nth-child(5),
+input#slide6:checked ~ .navigation label:nth-child(6),
+input#slide7:checked ~ .navigation label:nth-child(7) {
+    transform: scale(1.5); 
+    background-color: rgba(255, 255, 0, 0.8); 
+}
